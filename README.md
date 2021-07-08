@@ -22,4 +22,5 @@ Aplica las siguientes normas:
 ## Instrucción
 
 - En el primer commit en github se encuentra el código del ejercicio aplicando la primera norma, y en el archivo actual se encuentra la segunda aplicación de la norma que sería el que realmente cumple con las políticas de la empresa.
+- En ambos casos saldrá impreso en pantalla las constraseñas que han pasado la validación.
 

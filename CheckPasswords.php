@@ -1,10 +1,10 @@
 <?php
 
-function executeConditionals($num1, $num2, $password, $letter)
+function executeNewConditionals($num1, $num2, $password, $letter)
 {
-    $condition = substr_count($password, $letter);
-   
-    if ($condition >= $num1 && $condition <= $num2) {
+    $condition = strpos($password, $letter, 0);
+
+    if ($condition !== false && $condition === $num1 || $condition === $num2) {
         return "password correcto: " . $password . "<br>";
     }
 }
@@ -21,7 +21,7 @@ function checkPasswords()
         $letter = $item['letter'];
         $password = $item['password'];
 
-        $result = (executeConditionals($num1, $num2, $password, $letter));
+        $result = (executeNewConditionals($num1, $num2, $password, $letter)); 
 
         print_r($result);  
     }
@@ -29,3 +29,5 @@ function checkPasswords()
 
 checkPasswords();
 
+
+?>
